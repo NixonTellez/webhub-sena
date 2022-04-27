@@ -1,7 +1,153 @@
 *{
     font-family: 'Josefin Sans', sans-serif;
 }
+/* header */
+.header{
+    background:#ed7c31e8;
+    height: 80px;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.logo{
+    width: 200px;
+    margin-left: 30px;
 
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+.nav_link{
+    color: #fff;
+    text-decoration: none;
+
+}
+.nav_menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+    margin: 0 10px;
+}
+.link-display{
+    display: inline-block;
+    margin: 0 10px;
+    
+    /* prueba */
+    cursor: default;
+}
+.dropdown-button{  
+    padding: 3px;
+    font-size: 10px;
+}
+.instalaciones-dropdown{
+    display: none;
+}
+.nav-link-dropdown{
+    color: #fff;
+    text-decoration: none;
+}
+.nav-menu-dropdown{
+    list-style: none;
+}
+.instalaciones-dropdown ul{
+    padding-left: 0;
+}
+.nav ul li .link-display:hover, .nav ul li .link-dropdown:hover{
+    color: #000;
+    text-decoration: none;
+}
+.nav ul li:hover .instalaciones-dropdown{
+    display: block;
+    position: absolute;
+    background:#ed7c31e8;
+    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%);
+    font-weight: bold;
+}
+.nav ul li:hover .instalaciones-dropdown ul li{
+    border-bottom: 1px solid #fff;
+}
+.nav-menu-item{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 80px;
+    margin:0 10px;
+    width: max-content;
+}
+.nav-menu-item-drop{
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: bold;
+    margin: 8px 12px;
+}
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+.nav-menu-link:hover,.nav-menu-link_active{
+    background: #fff;
+    color: #ED7D31;
+    transition: .5s;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.nav-toggle{
+    color: #fff;
+    background: none;
+    border:none;
+    font-size: 30px;
+    padding: 0px 10px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+@media (max-width: 800px){
+    .header{
+        height: 60px;
+        margin-top: 0;
+    }
+    .logo{
+        width: 170px;
+        margin: auto;
+    }
+    .nav_menu{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background:#ed7c31e8;
+        position: fixed;
+        left: 0;
+        top: 59px;
+        width: 100%;
+        padding: 20px 0 ;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left:100%;
+        transition: left .3s;
+        
+    }
+    .nav-menu-item{
+        line-height: 50px;
+        font-size: 25px;
+        
+    }
+    .nav-menu-link:hover,
+    .nav-menu-link_active{
+        background: #fff;  
+        transition: 0.5s;
+        color: #ED7D31;      
+    }
+    .nav-toggle{
+        display: block;
+    }
+    .nav-menu_visible{
+        left: 0;
+    }
+}
 .form__login{
     background: #626161;
     margin: 8em auto 5em auto;
@@ -92,5 +238,82 @@
     }
     .form__container{
         width: 100%;
+    }
+}
+/*footer*/
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.15;
+}
+.overlay-footer-container{
+    background: #000 url(../img/Inspiración.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    color: #FFF;
+    position: relative;
+    display: flex;
+}
+.overlay_color{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .7;
+    position: absolute;
+}
+.footer .group-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    padding: 10px 0;
+}
+.footer .group-1 .box div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .group-1 .box div img{
+    width: 250px;
+} 
+.footer .group-1 .box h2{
+    margin: 16.6px 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer .group-1 .box p{
+    color: #fff;
+    font-size: 18px;
+    margin: 18px 0;
+
+}
+.box{
+    z-index: 1;
+}
+.footer .group-2{
+    background: #ED7D31;
+    padding: 10px 10px;
+    text-align: center;
+    color: #fff;
+}
+.footer .group-2 small{
+    font-size: 18px;
+}
+@media screen and (max-width:800px){
+    .footer{
+        position: relative;
+    }
+    .footer .group-1{
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 25px 0;
     }
 }

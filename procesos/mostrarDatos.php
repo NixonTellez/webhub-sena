@@ -3,7 +3,7 @@
     $obj=new Crud();
     $datos=$obj->mostrarDatos();
 
-    $tabla='<table class="table table-light" id="tabla">
+    $tabla='<table class="table-responsive-sm table-light" id="tabla">
     <thead>
         <tr class="font-weight-bold">
             <td>Codigo</td>

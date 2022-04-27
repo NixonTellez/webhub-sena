@@ -16,10 +16,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PDO</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="librerias/bootstrap4/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/inventario.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
@@ -27,21 +26,23 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+	<script defer src="js/responsive-menu.js"></script>
+    <script src="https://kit.fontawesome.com/a32e8b867e.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/Logo-de-SENA-sin-fondo-naranja-300x300.png"/>
+	<title>PDO</title>
 </head>
 <body>
-
-<header class="header">
+	<header class="header">       
         <nav class="nav">
             <a href="inventario.php"><img class="logo" src="img/logohubblanco.png" alt=""></a>
             <button class="nav-toggle"> <i class="fas fa-bars"></i> </button>
-            <ul class="nav-menu">
-                <li class="nav-menu-item"><a href="html/editar.html" class="nav-menu-link nav-link nav-menu-link_active">Inventario</a></li>
-                <li class="nav-menu-item"><a href="html/reservas.php" class="nav-menu-link nav-link">Ambientes</a></li>
-                <li class="nav-menu-item"><a href="procesos/salir.php" class="nav-menu-link nav-link">Cerrar Sesión</a></li>
+            <ul class="nav_menu">
+                <li class="nav-menu-item"><a href="inventario.php" class="nav-menu-link nav_link nav-menu-link_active">Inventario</a></li>               
+                <li class="nav-menu-item"><a href="html/ambientes.php" class="nav-menu-link nav_link">Ambientes</a></li>
+                <li class="nav-menu-item"><a href="procesos/salir.php" class="nav-menu-link nav_link">Cerrar Sesión</a></li>
             </ul>
         </nav>
     </header>
-
 	<div class="container font-weight-bold">
 		<div class="row">
 			<div class="col-sm-12">

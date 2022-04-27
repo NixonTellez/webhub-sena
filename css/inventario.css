@@ -2,40 +2,61 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 body{
+    margin-top: 90px;
 }
 /* header */
 .header{
-    background:#ED7D31;
+    background:#ed7c31e8;
     height: 80px;
-    z-index: 10;
+    position: fixed;
+    z-index: 100;
     width: 100%;
     top: 0;
     left: 0;
 }
 .logo{
     width: 200px;
+    margin-left: 30px;
+    
 }
 .nav{
     display: flex;
     justify-content: space-between;
     max-width: 992px;
     margin: 0 auto;
-
 }
-.nav-link{
+.nav_link{
     color: #fff;
     text-decoration: none;
+
 }
-.nav-menu{
+.nav_menu{
     display: flex;
     margin-right: 40px;
     list-style: none;
+    margin: 0 10px;
+}
+.link-display{
+    display: inline-block;
+    /* prueba */
+    cursor: default;
+}
+.dropdown-button{  
+    padding: 3px;
+    font-size: 10px;
 }
 .nav-menu-item{
     font-size: 20px;
-    font-weight: 900;
-    margin: 10px;
+    font-weight: bold;
+    line-height: 80px;
+    margin:0 10px;
     width: max-content;
+}
+.nav-menu-item-drop{
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: bold;
+    margin: 8px 12px;
 }
 .nav-menu-link{
     padding: 8px 12px;
@@ -46,6 +67,7 @@ body{
     color: #ED7D31;
     transition: .5s;
     font-weight: bolder;
+    text-decoration: none;
 }
 .nav-toggle{
     color: #fff;
@@ -57,9 +79,9 @@ body{
     display: none;
     cursor: pointer;
 }
-@media (max-width: 768px){
+@media (max-width: 800px){
     body{
-        padding-top: 60px;
+        margin-top: 70px;
     }
     .header{
         height: 60px;
@@ -69,11 +91,11 @@ body{
         width: 170px;
         margin: auto;
     }
-    .nav-menu{
+    .nav_menu{
         flex-direction: column;
         align-items: center;
         margin: 0;
-        background:#626161;
+        background:#ed7c31e8;
         position: fixed;
         left: 0;
         top: 59px;
@@ -83,7 +105,7 @@ body{
         overflow-y: auto;
         left:100%;
         transition: left .3s;
-
+        
     }
     .nav-menu-item{
         line-height: 50px;
@@ -92,8 +114,9 @@ body{
     }
     .nav-menu-link:hover,
     .nav-menu-link_active{
-        background: #7c7875;  
-        transition: 0.5s;      
+        background: #fff;  
+        transition: 0.5s;
+        color: #ED7D31;      
     }
     .nav-toggle{
         display: block;
@@ -104,13 +127,7 @@ body{
 }
 table.dataTable td {
     font-size: 3em;
-  }
-
-
-
-
-
-
+}
 /*footer*/
 .footer{
     width: 100%;
