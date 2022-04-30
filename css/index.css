@@ -158,15 +158,14 @@
     background-size: cover;
     background-position: center;
     margin-bottom: 3em;
-    margin-top: 5em;
 }
 
 .banner .contenedor{
     top: 30%;
     width: 100%;
     color: #fff;
-    padding-top: 6em;
-    padding-bottom: 4em;
+    padding-top: 8em;
+    padding-bottom: 3em;
     text-align: center;
 }
 .banner__txt{
@@ -208,19 +207,40 @@
     margin: 20px 0;
     text-align: center;
 }
-.info__txt{
-    background-color: #ED7D31;
-    border: 2px solid #FFF;
-    color: #FFF;
-    padding: 0.3em;
-    text-align: center;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 1.25em;
-    margin-bottom: 0.5em;
-    width: 100%;
+.button-link{
     text-decoration: none;
+}
+.button-test{
+    display: inline-flex;
+    height: 50px;
+    padding: 0;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button-test:hover, .button-link:hover{
+    background-color: rgb(237, 237, 237);
+    text-decoration: none;
+}
+.button-test:active{
+    background-color: rgb(224, 223, 223);
+
+}
+.button__text,.button__icon{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #ED7D31;
+    height: 100%;
+}
+.button__icon{
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.09);
 }
 .main{
     margin-bottom: 4em;
@@ -236,29 +256,10 @@
         padding: 15px;
         margin-bottom: 30px;
     }
-    .info__txt{
-        float: right;
-        background-color: #ED7D31;
-        border: none;
-        color: #FFF;
-        padding: 0.3em 0.5em;
-        text-align: center;
-        transition-duration: 0.4s;
-        cursor: pointer;
-        border-radius: 4px;
-        width: auto;
-    }
-    .info__txt:hover {
-        color: #ED7D31;
-        background-color: #FFF;
-    }
     .info{
         display: flex;
         justify-content: space-between;
         padding: 0px 8%;
-    }
-    .info__titulo{
-        margin-bottom: 1.5em;
     }
     .info__columna{
         width: 28%;
@@ -327,10 +328,7 @@
     .blog-post{
         display: flex;
         flex-direction: column;
-        margin-top: 3rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
+        margin: 3rem 1rem 1rem 1rem;
         justify-content: center;
         align-items: center;
         background: #626161;
@@ -507,7 +505,6 @@ iframe.video__src{
         padding: 25px 0;
     }
 }
-
 
 
 

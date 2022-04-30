@@ -52,11 +52,23 @@
                 <input name="contraseña" type="password" class="form__input" placeholder="Contraseña">
             </div>
             <input type="submit" value="Iniciar sesión" class="form__submit">
-            <div class="hreflogin">
-                <a href="recuperar.php">Recuperar contraseña</a>
-                <a href="registro.php">Registrarse</a>
-            </div>            
-        </div>
+            <a href="recuperar.php" class="button-link">
+                <button type="button" class="button-test">
+                    <span class="button__text">Recuperar Contraseña</span>
+                    <span class="button__icon">
+                        <i class="fa-solid fa-key"></i>
+                    </span>
+                </button>
+            </a>
+            <a href="registro.php" class="button-link">
+                <button type="button" class="button-test">
+                    <span class="button__text">Registrarse</span>
+                    <span class="button__icon">
+                        <i class="fa-solid fa-address-card"></i>
+                    </span>
+                </button>
+            </a>
+        </div>            
     </form>
 
     <footer class="footer">
