@@ -1,7 +1,7 @@
 <?php 
     require_once "../crud/crud.php";
-    $id = $_POST['id'];
+    $idEquipo = $_POST['idEquipo'];
 
 	$registro=new Crud;
-    echo $registro->eliminarDatos($id);      
+    echo $registro->eliminarDatos($idEquipo);      
 ?>
