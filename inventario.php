@@ -25,23 +25,43 @@
 	<script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
-	<script defer src="js/responsive-menu.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+	<script defer src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/a32e8b867e.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/Logo-de-SENA-sin-fondo-naranja-300x300.png"/>
 	<title>PDO</title>
 </head>
 <body>
-	<header class="header">       
-        <nav class="nav">
-            <a href="inventario.php"><img class="logo" src="img/logohubblanco.png" alt=""></a>
-            <button class="nav-toggle"> <i class="fas fa-bars"></i> </button>
-            <ul class="nav_menu">
-                <li class="nav-menu-item"><a href="inventario.php" class="nav-menu-link nav_link nav-menu-link_active">Inventario</a></li>               
-                <li class="nav-menu-item"><a href="html/ambientes.php" class="nav-menu-link nav_link">Ambientes</a></li>
-                <li class="nav-menu-item"><a href="procesos/salir.php" class="nav-menu-link nav_link">Cerrar Sesión</a></li>
-            </ul>
-        </nav>
+	<header class="header-top">
+        <div class="container-header">
+            <div class="header-main">
+                <div class="logo">
+                    <img src="img/logohubblanco.png" alt="">
+                </div>
+                <div class="open-nav-menu">
+                    <span></span>
+                </div>
+                <div class="menu-overlay">
+
+                </div>
+                    <nav class="nav-menu">
+                        <div class="close-nav-menu">
+                            <img src="img/svg/x-solid.svg" alt="">
+                        </div>
+                        <ul class="menu">
+                            <li class="menu-item menu-item-active">
+                                <a href="">Inventario</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="html/ambientes.php">Ambientes</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="procesos/salir.php">Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </nav>
+            </div>
+        </div> 
     </header>
 	<div class="container font-weight-bold">
 		<div class="row">

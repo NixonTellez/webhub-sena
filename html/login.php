@@ -7,39 +7,56 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
-    <script defer src="../js/responsive-menu.js"></script>
+    <script defer src="../js/script.js"></script>
     <script src="https://kit.fontawesome.com/a32e8b867e.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="shortcut icon" href="../img/Logo-de-SENA-sin-fondo-naranja-300x300.png"/>
-
     <title>Iniciar Sesión</title>
 </head>
 <body>
-    <header class="header">       
-        <nav class="nav">
-            <a href="../index.html"><img class="logo" src="../img/logohubblanco.png" alt=""></a>
-            <button class="nav-toggle"> <i class="fas fa-bars"></i> </button>
-            <ul class="nav_menu">
-                <li class="nav-menu-item"><a href="../index.html" class="nav-menu-link nav_link">Inicio</a></li>               
-                    <li class="nav-menu-item"><p href="#" class="nav-menu-link-insta nav_link link-display">Nuestras instalaciones<i class="fa-solid fa-chevron-down dropdown-button"></i></p>
-                    <div class="instalaciones-dropdown">
-                        <ul class="nav-menu-dropdown">
-                            <li class="nav-menu-item-drop"><a href="instalacionesc.html" class="nav-link-dropdown-active link-dropdown">Piso 1 - Coworking</a></li>
-                            <li class="nav-menu-item-drop"><a href="instalacioness.html" class="nav-link-dropdown link-dropdown">Piso 5 - Soluciones Creativas</a></li>
-                            <li class="nav-menu-item-drop"><a href="instalacionesl.html" class="nav-link-dropdown link-dropdown">Piso 13 - Laboratorio financiero</a></li>
+    <header class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <img src="../img/logohubblanco.png" alt="">
+                </div>
+                <div class="open-nav-menu">
+                    <span></span>
+                </div>
+                <div class="menu-overlay">
+
+                </div>
+                    <nav class="nav-menu">
+                        <div class="close-nav-menu">
+                            <img src="img/svg/x-solid.svg" alt="">
+                        </div>
+                        <ul class="menu">
+                            <li class="menu-item menu-item-active">
+                                <a href="../index.html">Inicio</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="" data-toggle="sub-menu">Nuestras instalaciones <i class="plus"></i> </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="instalacionesc.html">Piso 1 Coworking</a></li>
+                                    <li class="menu-item"><a href="instalacionesc.html">Piso 5 Soluciones creativas</a></li>
+                                    <li class="menu-item"><a href="instalacionesc.html">Piso 13 Laboratorio financiero</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="galeria.html">Galería</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="login.php">Iniciar sesión</a>
+                            </li>
                         </ul>
-                    </div>
-                </li>
-                <li class="nav-menu-item"><a href="galeria.html" class="nav-menu-link nav_link">Galería</a></li>
-                <li class="nav-menu-item"><a href="login.php" class="nav-menu-link nav_link nav-menu-link_active">Iniciar sesión</a></li>
-            </ul>
-        </nav>
+                    </nav>
+            </div>
+        </div> 
     </header>
 
     <form class="form__login" action="../procesos/loguear.php" method="POST">
