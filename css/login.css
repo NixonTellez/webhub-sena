@@ -290,7 +290,7 @@ a{
 }
 .form__login{
     background: #626161;
-    margin: 8em auto 5em auto;
+    margin: 8em auto 6em auto;
     width: 90%;
     max-width: 400px;
     padding: .8em 3em;
@@ -418,10 +418,10 @@ a{
 }
 /*footer*/
 .footer{
-    position: absolute;
     bottom: 0;
     width: 100%;
     line-height: 1.15;
+    margin-top: 2em;
 }
 .overlay-footer-container{
     background: #000 url(../img/Inspiración.png);

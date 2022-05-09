@@ -34,7 +34,7 @@
     position: relative;
 }
 .form__input{
-    width: 100%;
+    width: 97.33333%;
     background: #FFF;
     font-size: 20px;
     border: none;
@@ -114,7 +114,7 @@
         width: auto;
     }
     .form__input{
-        width: 100%;
+        width: 96.33333%;
     }
     .form__input2{
         width: 100%;
