@@ -64,6 +64,10 @@
     border: none;
     padding: 10px;
 }
+.form__submit:disabled{
+    background: rgba(237, 125, 49, 0.70);
+    color: rgba(256, 256, 256, 0.70);
+}
 .form__registro a, .form__registro p{
     color: #fff;
     font-size: 18px;

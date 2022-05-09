@@ -1,3 +1,6 @@
+<?php
+    include('../procesos/msjs.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,9 +20,21 @@
     <link rel="shortcut icon" href="../img/Logo-de-SENA-sin-fondo-naranja-300x300.png"/>
 
 
-    <title>Regitrarse</title>
+    <title>Registrarse</title>
 </head>
 <body>
+    <script>
+        function terms_changed(termsCheckBox){
+        //If the checkbox has been checked
+        if(termsCheckBox.checked){
+        //Set the disabled property to FALSE and enable the button.
+        document.getElementById("registrar").disabled = false;
+        } else{
+        //Otherwise, disable the submit button.
+        document.getElementById("registrar").disabled = true;
+        }
+        }
+    </script>
     <header class="header">       
         <nav class="nav">
             <a href="../index.html"><img class="logo" src="../img/logohubblanco.png" alt=""></a>
@@ -40,44 +55,49 @@
             </ul>
         </nav>
     </header>
-
-    <form class="form__registro">
+    <form id="form_registro_user" class="form__registro" action="../procesos/registrarUser.php" method="POST">
         <h2 class="form__title">Registro</h2>
         <div class="form__container">
             <div class="form__group">
-                <input type="text" class="form__input" placeholder="Nombres" required="true">
+                <input id="nombreUser" name="nombreUser" type="text" class="form__input" placeholder="Primer Nombre *" required="true">
             </div>
             <div class="form__group">
-                <input type="text" class="form__input" placeholder="Apellidos" required="true">
+                <input id="nombreUser2" name="nombreUser2" type="text" class="form__input" placeholder="Segundo Nombre">
             </div>
             <div class="form__group">
-                <select class="form__input2"  required="true">
-                    <option class="form__options" value="" disabled selected hidden>Tipo documento</option>
-                    <option class="form__options" value="">Cédula</option>
-                    <option class="form__options" value="">Pasaporte</option>
+                <input id="apellidoUser" name="apellidoUser" type="text" class="form__input" placeholder="Primer Apellido *" required="true">
+            </div>
+            <div class="form__group">
+                <input id="apellidoUser2" name="apellidoUser2" type="text" class="form__input" placeholder="Segundo Apellido">
+            </div>
+            <div class="form__group">
+                <select id="tipDocu" name="tipDocu" class="form__input2"  required="true">
+                    <option class="form__options" value="" disabled selected hidden>Tipo documento *</option>
+                    <option class="form__options" value="CC">Cédula</option>
+                    <option class="form__options" value="PASAPORTE">Pasaporte</option>
                 </select>
             </div>
             <div class="form__group">
-                <input type="text" class="form__input" placeholder="Número documento" required="true">
+                <input id="numDocu" name="numDocu" type="number" class="form__input" placeholder="Número documento *" required="true">
             </div>
             <div class="form__group">
-                <input type="text" class="form__input" placeholder="Teléfono">
+                <input id="telefono" name="telefono" type="tel" class="form__input" placeholder="Teléfono">
             </div>
             <div class="form__group">
-                <input type="email" class="form__input" placeholder="Correo" required="true">
+                <input id="correo" name="correo" type="email" class="form__input" placeholder="Correo *" required="true">
                 <span class="form__line"></span>
             </div>
             <div class="form__group">
-                <input type="email" class="form__input" placeholder="Repita Correo">
+                <input id="correoConfirm" name="correoConfirm"type="email" class="form__input" placeholder="Repita Correo">
             </div>
             <div class="form__group">
-                <input type="password" class="form__input" placeholder="Contraseña" required="true">
+                <input id="contraseña" name="contraseña" type="password" class="form__input" placeholder="Contraseña *" required="true">
             </div>
             <div class="form__group">
-                <input type="password" class="form__input" placeholder="Repita contraseña">
+                <input id="contraseñaConfirm" name="contraseñaConfirm" type="password" class="form__input" placeholder="Repita contraseña">
             </div>
-            <p> <input type="checkbox" name="cbox1"> Estoy de acuerdo con los <a href="./terminos-condiciones.html" target="_blank">términos y condiciones</a></p>
-            <input type="submit" value="Registrarse" class="form__submit">
+            <p> <input id="terminos"  type="checkbox" name="cbox1" onclick="terms_changed(this)"> Estoy de acuerdo con los <a href="./terminos-condiciones.html" target="_blank">términos y condiciones</a></p>
+            <input id="registrar" type="submit" value="Registrarse" class="form__submit" disabled>
             <a href="login.php">Iniciar sesión</a>
         </div>
     </form>

@@ -2,11 +2,12 @@
 
 	session_start();
 	$usuario = $_SESSION['username'];
+	$rol = $_SESSION['rol'];
 
 	if(!isset($usuario)){
         header("location: html/login.php");
     }else{
-    	if($usuario!="admin"){
+    	if($rol!="admin"){
 	        header("location: html/reservas.php");
 	    }	
     }

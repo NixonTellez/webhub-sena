@@ -52,7 +52,7 @@
             </div>
             <input type="submit" value="Recuperar" class="form__submit">
             <div class="hreflogin">
-                <a href="login.php">Iniciar sesion</a>
+                <a href="login.php">Iniciar sesión</a>
                 <a href="registro.php">Registrarse</a>
             </div>            
         </div>

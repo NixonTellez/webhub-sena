@@ -2,11 +2,12 @@
 
     session_start();
     $usuario = $_SESSION['username'];
+    $rol = $_SESSION['rol'];
 
     if(!isset($usuario)){
         header("location: login.php");
     }else{
-        if($usuario!="user"){
+        if($rol!="user"){
             header("location: ../inventario.php");
         }   
     }
@@ -33,7 +34,7 @@
             <a href="editar.html"><img class="logo" src="../img/logohubblanco.png" alt=""></a>
             <button class="nav-toggle"> <i class="fas fa-bars"></i> </button>
             <ul class="nav-menu">
-                <li class="nav-menu-item"><a href="editar.html" class="nav-menu-link nav-link">Editar perfil</a></li>
+                <li class="nav-menu-item"><a href="../procesos/obtenerDatosUser.php" class="nav-menu-link nav-link">Editar perfil</a></li>
                 <li class="nav-menu-item"><a href="reservas.html" class="nav-menu-link nav-link nav-menu-link_active">Reservas</a></li>
                 <li class="nav-menu-item"><a href="../procesos/salir.php" class="nav-menu-link nav-link">Cerrar Sesión</a></li>
             </ul>

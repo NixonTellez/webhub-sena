@@ -5,17 +5,19 @@
 	$correo = $_POST['correo'];
 	$contraseña = $_POST['contraseña'];
 
-	$q = "SELECT COUNT(*) as contar, FK_rol FROM usuario where correo = '$correo' and contraseña = '$contraseña' and activo = 1";
+	$q = "SELECT COUNT(*) as contar, FK_rol, idUsuario FROM usuario where correo = '$correo' and contraseña = '$contraseña' and activo = 1";
 	$consulta = mysqli_query($conexion1, $q);
 	$array = mysqli_fetch_array($consulta);
 
 	if ($array['contar']>0) {
 
+		$_SESSION['username'] = $array['idUsuario'];
+		
 		if ($array['FK_rol'] == 1) {
-			$_SESSION['username'] = "admin";
+			$_SESSION['rol'] = "admin";
 			header("location: ../inventario.php");
 		} else {
-			$_SESSION['username'] = "user";
+			$_SESSION['rol'] = "user";
 			header("location: ../html/reservas.php");
 		}
 	} else {
