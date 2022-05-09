@@ -10,15 +10,15 @@
       </div>
       <div class="modal-body font-weight-bold">
           <form id="frminsertu" onsubmit="return actualizarDatos()" method="post">
-            <input type="text" id="id" name="id" hidden="">
+            <input type="text" id="idEquipo" name="idEquipo" hidden="">
               <label>Codigo</label>
               <input type="text" id="codigou" name="codigou" class="form-control form-control-sm" required="">
               <label>Nombres</label>
               <input type="text" id="nombreu" name="nombreu" class="form-control form-control-sm" required="">
-              <label>Ambiente</label>
-              <input type="text" id="ambienteu" name="ambienteu" class="form-control form-control-sm" required="">
               <label>Estado</label>
               <input type="text" id="estadou" name="estadou" class="form-control form-control-sm">
+              <label>Ambiente</label>
+              <input type="text" id="FK_ambienteu" name="FK_ambienteu" class="form-control form-control-sm" required="">
               <label>Novedad</label>
               <textarea name="novedadu" id="novedadu" cols="30" rows="10" class="form-control form-control-sm"></textarea>
               <br>

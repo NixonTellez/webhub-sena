@@ -11,22 +11,23 @@ function obtenerDatos(idEquipo) {
 	$.ajax({
 		type:"POST",
 		data:"idEquipo="+idEquipo,
-		url:"../procesos/obtenerDatos.php",
+		url:"procesos/obtenerDatos.php",
 		success:function(r){
-			r=jQuery.parseJSON(r);
+			r=jQuery.parseJSON(r);	
 			$('#idEquipo').val(r['idEquipo']);
-			$('#codigou').val(r['codigou']);
+			$('#codigou').val(r['codigo']);
 			$('#nombreu').val(r['nombre']);
-			$('#ambienteu').val(r['ambiente']);
 			$('#estadou').val(r['estado']);
+			$('#FK_ambienteu').val(r['FK_ambiente']);
 			$('#novedadu').val(r['novedad']);
+		
 		}
 	});
 }
 function actualizarDatos(){
 	$.ajax({
 		type:"POST",
-		url:"../procesos/actualizarDatos.php",
+		url:"procesos/actualizarDatos.php",
 		data:$('#frminsertu').serialize(),
 		success:function(r){
 			console.log(r);
@@ -52,7 +53,7 @@ function eliminarDatos(idEquipo){
 		if (willDelete) {
 			$.ajax({
 				type:"POST",
-				url:"../procesos/EliminarDatos.php",
+				url:"procesos/EliminarDatos.php",
 				data:"idEquipo="+idEquipo,
 				success:function(r){
 					console.log(r);
@@ -70,7 +71,7 @@ function eliminarDatos(idEquipo){
 function insertarDatos() {
 	$.ajax({
 		type:"POST",
-		url:"../procesos/insertarDatos.php",
+		url:"procesos/insertarDatos.php",
 		data:$('#frminsert').serialize(),
 		success:function(r){
 			console.log(r);

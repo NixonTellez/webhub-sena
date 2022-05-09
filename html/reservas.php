@@ -24,21 +24,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/400dbe3ce8.js" crossorigin="anonymous"></script>
-    <script defer src="../js/index.js"></script>
+    <script defer src="../js/script.js"></script>
     <title>Inicio</title>
     <link rel="shortcut icon" href="../img/Logo-de-SENA-sin-fondo-naranja-300x300.png" />
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="editar.html"><img class="logo" src="../img/logohubblanco.png" alt=""></a>
-            <button class="nav-toggle"> <i class="fas fa-bars"></i> </button>
-            <ul class="nav-menu">
-                <li class="nav-menu-item"><a href="../procesos/obtenerDatosUser.php" class="nav-menu-link nav-link">Editar perfil</a></li>
-                <li class="nav-menu-item"><a href="reservas.html" class="nav-menu-link nav-link nav-menu-link_active">Reservas</a></li>
-                <li class="nav-menu-item"><a href="../procesos/salir.php" class="nav-menu-link nav-link">Cerrar Sesión</a></li>
-            </ul>
-        </nav>
+    <header class="header-top">
+        <div class="container-header">
+            <div class="header-main">
+                <div class="logo">
+                    <img src="../img/logohubblanco.png" alt="">
+                </div>
+                <div class="open-nav-menu">
+                    <span></span>
+                </div>
+                <div class="menu-overlay">
+
+                </div>
+                    <nav class="nav-menu">
+                        <div class="close-nav-menu">
+                            <img src="../img/svg/x-solid.svg" alt="">
+                        </div>
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="../procesos/obtenerDatosUser.php">Editar perfil</a>
+                            </li>
+                            <li class="menu-item  menu-item-active">
+                                <a href="reservas.php">Reserva</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="../procesos/salir.php">Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </nav>
+            </div>
+        </div> 
     </header>
     
     <h1 class="title">Reservar ambiente</h1>

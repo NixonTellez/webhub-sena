@@ -3,8 +3,8 @@
     $datos=array(
             'codigo'=>$_POST['codigo'],
             'nombre'=>$_POST['nombre'],
-            'ambiente'=>$_POST['ambiente'],
             'estado'=>$_POST['estado'],
+            'FK_ambiente'=>$_POST['FK_ambiente'],
             'novedad'=>$_POST['novedad']
             );
     $registro=new Crud;

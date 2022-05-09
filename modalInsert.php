@@ -15,10 +15,10 @@
               <input type="text" id="codigo" name="codigo" class="form-control form-control-sm" required="">
               <label>Nombres</label>
               <input type="text" id="nombre" name="nombre" class="form-control form-control-sm" required="">
-              <label>Ambiente</label>
-              <input type="text" id="ambiente" name="ambiente" class="form-control form-control-sm" required="">
               <label>Estado</label>
               <input type="text" id="estado" name="estado" class="form-control form-control-sm">
+              <label>Ambiente</label>
+              <input type="text" id="FK_ambiente" name="FK_ambiente" class="form-control form-control-sm" required="">
               <label>Novedad</label>
               <textarea name="novedad" id="novedad" cols="30" rows="10" class="form-control form-control-sm"></textarea>
               <br>

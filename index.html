@@ -10,30 +10,49 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="https://kit.fontawesome.com/a32e8b867e.js" crossorigin="anonymous"></script>
-    <script defer src="./js/responsive-menu.js"></script>
+    <script defer src="./js/script.js"></script>
     <title>Inicio</title>
     <link rel="shortcut icon" href="img/Logo-de-SENA-sin-fondo-naranja-300x300.png" />
 </head>
 <body class="body-class-name">
-    <header class="header">       
-        <nav class="nav">
-            <a href="#"><img class="logo" src="img/logohubblanco.png" alt=""></a>
-            <button class="nav-toggle"> <i class="fas fa-bars"></i> </button>
-            <ul class="nav_menu">
-                <li class="nav-menu-item"><a href="index.html" class="nav-menu-link nav_link nav-menu-link_active">Inicio</a></li>
-                <li class="nav-menu-item"><p href="" class="nav-menu-link-insta nav_link link-display">Nuestras instalaciones<i class="fa-solid fa-chevron-down dropdown-button"></i></p>
-                    <div class="instalaciones-dropdown">
-                        <ul class="nav-menu-dropdown">
-                            <li class="nav-menu-item-drop"><a href="./html/instalacionesc.html" class="nav-link-dropdown link-dropdown">Piso 1 - Coworking</a></li>
-                            <li class="nav-menu-item-drop"><a href="./html/instalacioness.html" class="nav-link-dropdown link-dropdown">Piso 5 - Soluciones Creativas</a></li>
-                            <li class="nav-menu-item-drop"><a href="./html/instalacionesl.html" class="nav-link-dropdown link-dropdown">Piso 13 - Laboratorio financiero</a></li>
+    <header class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <img src="img/logohubblanco.png" alt="">
+                </div>
+                <div class="open-nav-menu">
+                    <span></span>
+                </div>
+                <div class="menu-overlay">
+
+                </div>
+                    <nav class="nav-menu">
+                        <div class="close-nav-menu">
+                            <img src="img/svg/x-solid.svg" alt="">
+                        </div>
+                        <ul class="menu">
+                            <li class="menu-item menu-item-active">
+                                <a href="">Inicio</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="" data-toggle="sub-menu">Nuestras instalaciones <i class="plus"></i> </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="html/instalacionesc.html">Piso 1 Coworking</a></li>
+                                    <li class="menu-item"><a href="html/instalacionesc.html">Piso 5 Soluciones creativas</a></li>
+                                    <li class="menu-item"><a href="html/instalacionesc.html">Piso 13 Laboratorio financiero</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="html/galeria.html">Galería</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="html/login.php">Iniciar sesión</a>
+                            </li>
                         </ul>
-                    </div>
-                </li>
-                <li class="nav-menu-item"><a href="html/galeria.html" class="nav-menu-link nav_link">Galería</a></li>
-                <li class="nav-menu-item"><a href="html/login.php" class="nav-menu-link nav_link">Iniciar sesión</a></li>
-            </ul>
-        </nav>
+                    </nav>
+            </div>
+        </div> 
     </header>
     <!-- Banner hub -->
     <div class="banner banner_color">
@@ -49,17 +68,38 @@
                 <article class="info__columna">
                     <img src="img/piso1.jpg" alt="" class="info__img">
                     <h2 class="info__titulo">Coworking</h2>
-                    <a class="info__txt" href="html/instalacionesc.html">Ver más >></a>
+                    <a href="html/instalacionesc.html" class="button-link">
+                        <button type="button" class="button-test">
+                            <span class="button__text">Ver piso 1</span>
+                            <span class="button__icon">
+                                <i class="fa-solid fa-angles-right"></i>
+                            </span>
+                        </button>
+                    </a>
                 </article>
                 <article class="info__columna">
                     <img src="img/piso5terraza.jpg" alt="" class="info__img">
                     <h2 class="info__titulo">Soluciones creativas</h2>
-                    <a class="info__txt" href="html/instalacioness.html">Ver más>></a>
+                    <a href="html/instalacioness.html" class="button-link">
+                        <button type="button" class="button-test">
+                            <span class="button__text">Ver piso 5</span>
+                            <span class="button__icon">
+                                <i class="fa-solid fa-angles-right"></i>
+                            </span>
+                        </button>
+                    </a>
                 </article>
                 <article class="info__columna">
                     <img src="img/piso13.jpg" alt="" class="info__img">
                     <h2 class="info__titulo">Laboratorio financiero</h2>
-                    <a class="info__txt" href="html/instalacionesl.html">Ver más>></a>
+                    <a href="html/instalacionesl.html" class="button-link">
+                        <button type="button" class="button-test">
+                            <span class="button__text">Ver piso 13</span>
+                            <span class="button__icon">
+                                <i class="fa-solid fa-angles-right"></i>
+                            </span>
+                        </button>
+                    </a>
                 </article>
             </section>
         </div>
@@ -67,30 +107,39 @@
     <!-- emprendimiento del mes -->
     <div class="blog-post">
         <div class="blog-post-img">
-            <img src="./img/br.jpg" alt="">
+            <img src="https://i0.wp.com/blog.socialab.com/wp-content/uploads/2019/03/algramo-emprendimiento-social.jpg?resize=712%2C534&ssl=1" alt="">
         </div>
         <div class="blog-post-info">
             <div class="blog-post-title">
-                <h2>Emprendimiento</h2>
+                <h2>Emprendimiento del mes</h2>
             </div>
             <div class="blog-post-date">
                 <span>Thursday</span>
                 <span>February 3rd 2022</span>
             </div>
             <div class="blog-post-desc">
-                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa qui vero voluptatem deleniti, dignissimos quo amet iusto nulla rem tenetur est, aperiam accusantium neque. Mollitia repellat veniam corrupti pariatur alias? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam laboriosam distinctio quae, velit non soluta inventore fuga dolorem explicabo id consectetur tempora beatae deserunt molestias animi et quasi repellat quia.</p>
+                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa qui vero voluptatem deleniti, dignissimos quo amet iusto nulla
+                     rem tenetur est, aperiam accusantium neque. Mollitia repellat veniam corrupti pariatur alias? Lorem, ipsum dolor sit amet consectetur
+                      adipisicing elit. Totam laboriosam distinctio quae, velit non soluta inventore fuga dolorem explicabo id consectetur tempora beatae
+                       deserunt molestias animi et quasi repellat quia Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi reprehenderit 
+                       repudiandae explicabo numquam ea tenetur voluptatem sit consequatur et corporis aperiam nemo velit, libero autem dolores ducimus animi aliquid deserunt..</p>
             </div>
-            <div class="blog-post-readmore">
-                <a href="#">Ver más</a>
-            </div>
+            <a href="#" class="button-link">
+                <button type="button" class="button-test">
+                    <span class="button__text">Ver más</span>
+                    <span class="button__icon">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </span>
+                </button>
+            </a>
         </div>
     </div>
     <!--video-->
     <div class="video__container">
         <div class="video__txt"><strong>Conoce el trabajo con nuestros emprendedores</strong></div>
         <iframe class="video__src" src="https://www.youtube.com/embed/u410ovGUMCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
     </div>
+
     <footer class="footer">
         <div class="overlay-container-hub">
             <div class="group-1">
@@ -119,7 +168,6 @@
             <small>&copy; 2022 <b>HUB de innovación 4.0 Regional distrito capital -Todos los Derechos Reservados. </b> </small>
         </div>
     </footer>
-    
     
 </body>
 </html>

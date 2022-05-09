@@ -3,13 +3,13 @@
     $obj=new Crud();
     $datos=$obj->mostrarDatos();
 
-    $tabla='<table class="table table-light" id="tabla">
+    $tabla='<table class="table-responsive-sm table-light" id="tabla">
     <thead>
         <tr class="font-weight-bold">
             <td>Codigo</td>
             <td>Nombre</td>
-            <td>Ambiente</td>
             <td>Estado</td>
+            <td>Ambiente</td>
             <td>Editar</td>
             <td>Eliminar</td>
         </tr>
@@ -20,8 +20,8 @@
         $datosTabla=$datosTabla.'<tr>
                                 <td>'.$value['codigo'].'</td>
                                 <td>'.$value['nombre'].'</td>
-                                <td>'.$value['FK_ambiente'].'</td>
                                 <td>'.$value['estado'].'</td>
+                                <td>'.$value['FK_ambiente'].'</td>
                                 <td>
                                     <span class="btn btn-warning btn-sm" onclick="obtenerDatos('.$value['idEquipo'].')" data-toggle="modal" data-target="#actualizarModal">
                                         <i class="fas fa-edit"></i>
