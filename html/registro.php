@@ -48,7 +48,7 @@
                             <img src="../img/svg/x-solid.svg" alt="">
                         </div>
                         <ul class="menu">
-                            <li class="menu-item menu-item-active">
+                            <li class="menu-item">
                                 <a href="../index.html">Inicio</a>
                             </li>
                             <li class="menu-item menu-item-has-children">
@@ -62,7 +62,7 @@
                             <li class="menu-item">
                                 <a href="galeria.html">Galería</a>
                             </li>
-                            <li class="menu-item">
+                            <li class="menu-item menu-item-active">
                                 <a href="login.php">Iniciar sesión</a>
                             </li>
                         </ul>
@@ -111,7 +111,7 @@
             <div class="form__group">
                 <input id="contraseñaConfirm" name="contraseñaConfirm" type="password" class="form__input" placeholder="Repita contraseña">
             </div>
-            <p> <input id="terminos"  type="checkbox" name="cbox1" onclick="terms_changed(this)"> Estoy de acuerdo con los <a href="./terminos-condiciones.html" target="_blank">términos y condiciones</a></p>
+            <p> <input id="terminos"  type="checkbox" name="cbox1" onclick="terms_changed(this)"> Estoy de acuerdo con los <a href="./terminos-condiciones.html" target="_blank"><ins>términos y condiciones</ins></a></p>
             <input id="registrar" type="submit" value="Registrarse" class="form__submit" disabled>
             <a href="login.php">Iniciar sesión</a>
         </div>

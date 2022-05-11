@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/400dbe3ce8.js" crossorigin="anonymous"></script>
     <script defer src="../js/script.js"></script>
-    <title>Inicio</title>
+    <title>Reservas - Inicio</title>
     <link rel="shortcut icon" href="../img/Logo-de-SENA-sin-fondo-naranja-300x300.png" />
 </head>
 <body>
@@ -66,47 +66,87 @@
         <div class="card">
             <img src="../img/cabinas.jpeg" alt="">
             <h4>Cabina</h4>
-            <a href="formreserva.html">Reservar</a>
+            <a href="formreserva.php?idAmbiente=7">Reservar</a>
         </div>
         <div class="card">
             <img src="../img/coworking.jpeg" alt="">
             <h4>Trabajo colaborativo</h4>
-            <a href="">Reservar</a>
+            <a href="formreserva.php?idAmbiente=3">Reservar</a>
         </div>
         <div class="card">
             <img src="../img/coworking2.jpeg" alt="">
             <h4>Trabajo colaborativo</h4>
-            <a href="">Reservar</a>
+            <a href="formreserva.php?idAmbiente=1">Reservar</a>
         </div>
         <div class="card">
             <img src="../img/salaColaborativa.jpeg" alt="">
             <h4>Sala colaborativa</h4>
-            <a href="">Reservar</a>
+            <a href="formreserva.php?idAmbiente=8">Reservar</a>
         </div>
         <div class="card">
             <img src="../img/desarrollo.jpeg" alt="">
             <h4>Desarrollo digital</h4>
-            <a href="">Reservar</a>
+            <a href="formreserva.php?idAmbiente=19">Reservar</a>
         </div>
         <div class="card">
             <img src="../img/desarrollo2.jpeg" alt="">
             <h4>Desarrollo digital</h4>
-            <a href="">Reservar</a>
+            <a href="formreserva.php?idAmbiente=18">Reservar</a>
         </div>
         <div class="card">
             <img src="../img/Inspiración.png" alt="">
             <h4>Zona de Inspiración</h4>
-            <a href="">Reservar</a>
+            <a href="formreserva.php?idAmbiente=20">Reservar</a>
         </div>
         <div class="card">
             <img src="../img/seguridad.jpeg" alt="">
-            <h4>Pensiones</h4>
-            <a href="">Reservar</a>
+            <h4>Seguridad y control</h4>
+            <a href="formreserva.php?idAmbiente=21">Reservar</a>
         </div>
         <div class="card">
             <img src="../img/terraza.jpg" alt="">
             <h4>Terraza</h4>
-            <a href="">Reservar</a>
+            <a href="formreserva.php?idAmbiente=22">Reservar</a>
+        </div>
+        <div class="card">
+            <img src="../img/worldSkills.jpeg" alt="">
+            <h4>World skills</h4>
+            <a href="formreserva.php?idAmbiente=23">Reservar</a>
+        </div>
+        <div class="card">
+            <img src="../img/banca.jpeg" alt="">
+            <h4>Banca</h4>
+            <a href="formreserva.php?idAmbiente=25">Reservar</a>
+        </div>
+        <div class="card">
+            <img src="../img/13 bpo.jpeg" alt="">
+            <h4>BPO</h4>
+            <a href="formreserva.php?idAmbiente=30">Reservar</a>
+        </div>
+        <div class="card">
+            <img src="../img/13 fiducia.jpeg" alt="">
+            <h4>Fiducia</h4>
+            <a href="formreserva.php?idAmbiente=26">Reservar</a>
+        </div>
+        <div class="card">
+            <img src="../img/13 labFinanciero.jpeg" alt="">
+            <h4>Laboratorio</h4>
+            <a href="formreserva.php?idAmbiente=24">Reservar</a>
+        </div>
+        <div class="card">
+            <img src="../img/13 opBursatil.jpeg" alt="">
+            <h4>Operación bursátil</h4>
+            <a href="formreserva.php?idAmbiente=29">Reservar</a>
+        </div>
+        <div class="card">
+            <img src="../img/13 pensiones.jpeg" alt="">
+            <h4>Pensiones</h4>
+            <a href="formreserva.php?idAmbiente=28">Reservar</a>
+        </div>
+        <div class="card">
+            <img src="../img/13 seguros.jpeg" alt="">
+            <h4>Seguros</h4>
+            <a href="formreserva.php?idAmbiente=27">Reservar</a>
         </div>
     </div>
 

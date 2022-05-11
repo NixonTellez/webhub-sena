@@ -37,7 +37,7 @@
                             <img src="../img/svg/x-solid.svg" alt="">
                         </div>
                         <ul class="menu">
-                            <li class="menu-item menu-item-active">
+                            <li class="menu-item">
                                 <a href="../index.html">Inicio</a>
                             </li>
                             <li class="menu-item menu-item-has-children">
@@ -51,7 +51,7 @@
                             <li class="menu-item">
                                 <a href="galeria.html">Galería</a>
                             </li>
-                            <li class="menu-item">
+                            <li class="menu-item menu-item-active">
                                 <a href="login.php">Iniciar sesión</a>
                             </li>
                         </ul>

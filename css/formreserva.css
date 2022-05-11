@@ -2,110 +2,196 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 /* header */
-.header{
-    background:#ED7D31;
-    height: 80px;
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    top: 0;
-    left: 0;
+body{
+    margin-top: 120px;
 }
-.logo{
-    width: 200px;
+/* header */
+body.hidden-scrolling{
+    overflow-y: hidden;
 }
-.nav{
-    display: flex;
-    justify-content: space-between;
-    max-width: 992px;
-    margin: 0 auto;
+.container-header{
+    max-width: 1170px;
+    margin: auto;
 
 }
-.nav-link{
-    color: #fff;
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
     text-decoration: none;
 }
-.nav-menu{
+.header-top{
+    position: absolute;
+    /* background: #ED7D31; */
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    padding: 15px;
+    box-sizing: border-box;
+
+}
+.header-main{
+    background-color: #fff;
     display: flex;
-    margin-right: 40px;
-    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 4px;
+    background: #ed7c31b3;
+
+
 }
-.nav-menu-item{
-    font-size: 20px;
-    font-weight: 900;
-    margin: 10px;
-    width: max-content;
+.header-top .logo{
+    padding: 0 15px;
 }
-.nav-menu-link{
-    padding: 8px 12px;
-    border-radius: 3px;
-}
-.nav-menu-link:hover,.nav-menu-link_active{
-    background: #ca7136;
-    transition: .5s;
-}
-.nav-toggle{
-    color: #fff;
-    background: none;
-    border:none;
-    font-size: 30px;
-    padding: 0px 10px;
-    line-height: 60px;
-    display: none;
+.header-top .logo img{
+    width: 200px;
     cursor: pointer;
 }
-@media (max-width: 768px){
-    body{
-        padding-top: 60px;
+.header-top .nav-menu{
+    padding: 0 15px;
+}
+.header-top .menu > .menu-item{
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+}
+.header-top .menu > .menu-item > a{
+    display: block;
+    margin-left: 15px 0;
+    padding: 20px 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+.header-top .menu > .menu-item-active > a::after{
+    content: '';
+    background: #fff;
+    display: block;
+    width: auto;
+    height: 1px;
+}
+.header-top .menu > .menu-item:hover > a{
+    color: #000;
+}
+.header-top .open-nav-menu{
+    height: 34px;
+    width: 40px;
+    margin-right: 15px;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.header-top .open-nav-menu span{
+    display: block;
+    height: 3px;
+    width: 24px;
+    background: #fff;
+    position: relative;
+}
+.header-top .open-nav-menu span:before,
+.header-top .open-nav-menu span:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-sizing: border-box;
+}
+.header-top .open-nav-menu span:before{
+    top: -7px;
+}
+.header-top .open-nav-menu span:after{
+    top: 7px;
+}
+.header-top .close-nav-menu{
+    height: 40px;
+    width:  40px;
+    background: #FFF;
+    margin:0 0 15px 15px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+}
+.header-top .close-nav-menu img{
+    width:  16px;
+}
+.header-top .menu-overlay{
+    position: fixed;
+    z-index: 200;
+    background-color: rgba(0,0,0,0.3);
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+}
+.header-top .menu-overlay.active{
+    visibility: visible;
+    opacity: 1;
+}
+/* responsive header-top */
+@media(max-width:991px){
+    .header-top{
+        padding: 5px;
     }
-    .header{
-        height: 60px;
-        margin-top: 0;
+    .header-top .logo img{
+        width: 150px;
     }
-    .logo{
-        width: 170px;
-        margin: auto;
-    }
-    .nav-menu{
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        background:#626161;
+    .header-top .nav-menu{
         position: fixed;
-        left: 0;
-        top: 59px;
-        width: 100%;
-        padding: 20px 0 ;
-        height: calc(100% - 60px);
+        right: -280px;
+        visibility: hidden;
+        width: 280px;
+        height: 100%;
+        top: 0;
         overflow-y: auto;
-        left:100%;
-        transition: left .3s;
-
+        background-color: #222;
+        z-index: 200;
+        padding: 15px 0;
+        transition: all 0.5s ease;
     }
-    .nav-menu-item{
-        line-height: 50px;
-        font-size: 25px;
-        
+    .header-top .nav-menu.open{
+        visibility: visible;
+        right: 0px;
     }
-    .nav-menu-link:hover,
-    .nav-menu-link_active{
-        background: #7c7875;  
-        transition: 0.5s;      
-    }
-    .nav-toggle{
+    .header-top .menu > .menu-item{
         display: block;
+        margin: 0;
     }
-    .nav-menu_visible{
-        left: 0;
+    .header-top .menu > .menu-item > a{
+        padding: 20px 15px;
+        border-bottom: 1px solid #333;
+    }
+    .header-top .menu > .menu-item:first-child > a{
+        border-top: 1px solid #333;
+    }
+    .header-top .close-nav-menu,
+    .header-top .open-nav-menu{
+        display: flex;
     }
 }
+
+
 
 .form-container{
     max-width: 300px;
     width: 100%;
     background: #616162;
-    padding: 15px 15px;
-    margin: 100px auto 10px;
+    padding: 1.8em 3em;
+    margin: 100px auto 40px;
     border-radius: 5px;
 } 
 .form-container .title{
@@ -177,12 +263,11 @@ form .button input:hover{
     background: rgba(191, 65, 20, 0.905);
 } 
 @media (max-width:584px){
-    .container{
-        max-width: 100%;
-    }
     .form-container{
-        margin: auto;
-        
+        width: auto;
+
+        padding: 1.5em 2em;
+        margin: 100px auto 30px;
     }
 }
 
@@ -229,10 +314,6 @@ form .button input:hover{
     font-size: 18px;
 }
 @media screen and (max-width:800px){
-    .footer{
-        width: 100%;
-        background: #626161;
-    }
     .footer .group-1{
         width: 90%;
         grid-template-columns: 1fr;
@@ -240,4 +321,3 @@ form .button input:hover{
         padding: 25px 0;
     }
 }
-
