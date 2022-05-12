@@ -11,7 +11,6 @@
 	        header("location: html/reservas.php");
 	    }	
     }
-    
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +29,7 @@
 	<script defer src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/a32e8b867e.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/Logo-de-SENA-sin-fondo-naranja-300x300.png"/>
-	<title>PDO</title>
+	<title>Inventario</title>
 </head>
 <body>
 	<header class="header-top">
@@ -50,8 +49,11 @@
                             <img src="img/svg/x-solid.svg" alt="">
                         </div>
                         <ul class="menu">
+                            <li class="menu-item">
+                                <a href="procesos/obtenerDatosUser.php">Editar perfil</a>
+                            </li>
                             <li class="menu-item menu-item-active">
-                                <a href="">Inventario</a>
+                                <a href="inventario.php">Inventario</a>
                             </li>
                             <li class="menu-item">
                                 <a href="html/ambientes.php">Ambientes</a>
@@ -64,16 +66,20 @@
             </div>
         </div> 
     </header>
-	<div class="container font-weight-bold">
+	<div style="font-size: 1.05em;" class="container font-weight-bold">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="card text-left">
 					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
-								<span class="btn btn-secondary" data-toggle="modal" data-target="#insertarModal">
-									<i class="fas fa-plus-circle"></i> Nuevo registro
-								</span>
+								<div class="btn-group flex-wrap btn-group-toggle">
+									<span class="btn btn-secondary" data-toggle="modal" data-target="#insertarModal">
+										<i class="fas fa-plus-circle"></i> Nuevo registro
+									</span>
+									<a onclick="window.open(this.href,'_blank');return false;" href="./procesos/consulta.php" class="btn btn-secondary"><i class="fa-solid fa-circle-chevron-down"></i> Exportar a excel</a>
+									<a href="./html/novedades.php" class="btn btn-secondary"><i class="fa-solid fa-clock-rotate-left"></i> Novedades</a>
+								</div>
 							</div>
 						</div>
 						<hr>
@@ -91,6 +97,7 @@
 	</div>
 	
 	<?php require_once "modalInsert.php" ?>
+	<?php require_once "modalInsertNov.php" ?>
 	<?php require_once "modalUpdate.php" ?>
 
 	<script src="librerias/bootstrap4/jquery-3.4.1.min.js"></script>
@@ -99,10 +106,8 @@
 	<script src="librerias/sweetalert.min.js"></script>
 	<script src="jsc/crud.js"></script>
 
-
 	<script type="text/javascript">
 		mostrar();
 	</script>
-
 </body>
 </html>

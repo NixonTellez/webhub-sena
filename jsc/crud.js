@@ -7,6 +7,7 @@ function mostrar(){
 		}
 	});
 }
+
 function obtenerDatos(idEquipo) {
 	$.ajax({
 		type:"POST",
@@ -77,6 +78,46 @@ function insertarDatos() {
 			console.log(r);
 			if(r==1){
 				$('#frminsert')[0].reset();//limpiar formulario
+				mostrar();
+				swal("!Agregado con exito¡",":D","success");
+			}else{
+				swal("!Error¡",":(","error");	
+			}
+		}
+	});
+	return false;
+}
+
+function mostrarNovedad(){
+	$.ajax({
+		type:"POST",
+		url:"../procesos/mostrarDatosNovedad.php",
+		success:function(r){
+			$('#tablaDatosNovedad').html(r);
+		}
+	});
+}
+
+function obtenerDatosNovedad(idEquipo) {
+	$.ajax({
+		type:"POST",
+		data:"idEquipo="+idEquipo,
+		url:"procesos/obtenerDatosNovedad.php",
+		success:function(r){
+			r=jQuery.parseJSON(r);	
+			$('#idEquipou').val(r['idEquipo']);
+		}
+	});
+}
+function registrarNovedad() {
+	$.ajax({
+		type:"POST",
+		url:"procesos/insertarDatosNovedad.php",
+		data:$('#frminsertnov').serialize(),
+		success:function(r){
+			console.log(r);
+			if(r==1){
+				$('#frminsertnov')[0].reset();//limpiar formulario
 				mostrar();
 				swal("!Agregado con exito¡",":D","success");
 			}else{

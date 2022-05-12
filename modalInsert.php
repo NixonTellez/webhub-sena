@@ -9,18 +9,21 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div style="font-size: 1.05em;" class="modal-body">
           <form id="frminsert" onsubmit="return insertarDatos()" method="post">
               <label>Codigo</label>
               <input type="text" id="codigo" name="codigo" class="form-control form-control-sm" required="">
               <label>Nombres</label>
               <input type="text" id="nombre" name="nombre" class="form-control form-control-sm" required="">
               <label>Estado</label>
-              <input type="text" id="estado" name="estado" class="form-control form-control-sm">
+              <select id="estado" name="estado" class="form-control form-control-sm">
+                <option value="" disabled selected hidden>Estado</option>
+                <option value="EN USO">En uso</option>
+                <option value="DAÑADO">Con daños</option>
+                <option value="MANTENIMIENTO">En mantenimiento</option>
+              </select>
               <label>Ambiente</label>
-              <input type="text" id="FK_ambiente" name="FK_ambiente" class="form-control form-control-sm" required="">
-              <label>Novedad</label>
-              <textarea name="novedad" id="novedad" cols="30" rows="10" class="form-control form-control-sm"></textarea>
+              <input type="number" id="FK_ambiente" name="FK_ambiente" class="form-control form-control-sm" required="">
               <br>
                <input type="submit" value="Guardar" class="btn btn-primary">
           </form>

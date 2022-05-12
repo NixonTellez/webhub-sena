@@ -8,19 +8,22 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body font-weight-bold">
+      <div style="font-size: 1.05em;" class="modal-body font-weight-bold">
           <form id="frminsertu" onsubmit="return actualizarDatos()" method="post">
-            <input type="text" id="idEquipo" name="idEquipo" hidden="">
+            <input type="text" id="idEquipo" name="idEquipo" hidden>
               <label>Codigo</label>
               <input type="text" id="codigou" name="codigou" class="form-control form-control-sm" required="">
               <label>Nombres</label>
               <input type="text" id="nombreu" name="nombreu" class="form-control form-control-sm" required="">
               <label>Estado</label>
-              <input type="text" id="estadou" name="estadou" class="form-control form-control-sm">
+              <select id="estadou" name="estadou" class="form-control form-control-sm">
+                <option value="" disabled selected hidden>Estado</option>
+                <option value="EN USO">En uso</option>
+                <option value="DAÑADO">Con daños</option>
+                <option value="MANTENIMIENTO">En mantenimiento</option>
+              </select>
               <label>Ambiente</label>
-              <input type="text" id="FK_ambienteu" name="FK_ambienteu" class="form-control form-control-sm" required="">
-              <label>Novedad</label>
-              <textarea name="novedadu" id="novedadu" cols="30" rows="10" class="form-control form-control-sm"></textarea>
+              <input type="number" id="FK_ambienteu" name="FK_ambienteu" class="form-control form-control-sm" required="">
               <br>
                <input type="submit" value="Actualizar" class="btn btn-warning">
           </form>

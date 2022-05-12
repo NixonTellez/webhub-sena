@@ -1,5 +1,6 @@
 <?php 
     require_once "../crud/crud.php";
+    require_once "../crud/crudNovedad.php";
     $obj=new Crud();
     $datos=$obj->mostrarDatos();
 
@@ -9,7 +10,8 @@
             <td>Codigo</td>
             <td>Nombre</td>
             <td>Estado</td>
-            <td>Ambiente</td>
+            <td>ID - Ambiente</td>
+            <td>Novedad</td>
             <td>Editar</td>
             <td>Eliminar</td>
         </tr>
@@ -21,14 +23,18 @@
                                 <td>'.$value['codigo'].'</td>
                                 <td>'.$value['nombre'].'</td>
                                 <td>'.$value['estado'].'</td>
-                                <td>'.$value['FK_ambiente'].'</td>
-                                <td>
+                                <td>'.$value['FK_ambiente'].'-'.$value['nombreA'].'</td>
+                                <td style="text-align: center;">
+                                    <span class="btn btn-primary btn-sm" onclick="obtenerDatosNovedad('.$value['idEquipo'].')" data-toggle="modal" data-target="#novedadModal">
+                                        <i class="fas fa-plus"></i>
+                                    </span>
+                                </td>
+                                <td style="text-align: center;">
                                     <span class="btn btn-warning btn-sm" onclick="obtenerDatos('.$value['idEquipo'].')" data-toggle="modal" data-target="#actualizarModal">
                                         <i class="fas fa-edit"></i>
                                     </span>
-                                    
                                 </td>
-                                <td>
+                                <td style="text-align: center;">
                                     <span class="btn btn-danger btn-sm" onclick="eliminarDatos('.$value['idEquipo'].')">
                                         <li class="fas fa-trash-alt"></li>
                                     </span>

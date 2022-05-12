@@ -4,8 +4,7 @@
             'codigo'=>$_POST['codigo'],
             'nombre'=>$_POST['nombre'],
             'estado'=>$_POST['estado'],
-            'FK_ambiente'=>$_POST['FK_ambiente'],
-            'novedad'=>$_POST['novedad']
+            'FK_ambiente'=>$_POST['FK_ambiente']
             );
     $registro=new Crud;
     echo $registro->insertarDatos($datos);        
