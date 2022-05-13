@@ -1,30 +1,28 @@
 <?php 
-    require_once "../crud/crudNovedad.php";
-    $obj=new CrudNovedad();
-    $datos=$obj->mostrarDatosNovedad();
+    require_once "../crud/crudAmbiente.php";
+    $obj=new CrudAmbiente();
+    $datos=$obj->mostrarDatos();
 
     $tabla='<table>
     <thead>
         <tr>
-            <td>Codigo</td>
+            <td>ID</td>
             <td>Nombre</td>
-            <td>Fecha</td>
-            <td>Tipo</td>
-            <td>Descripción</td>
+            <td>Aforo</td>
+            <td>Ubicacion</td>
         </tr>
     </thead>
     <tbody>';
     $datosTabla="";
     foreach ($datos as $key => $value) {
         $datosTabla=$datosTabla.'<tr>
-                                <td>'.$value['codigo'].'</td>
+                                <td>'.$value['idAmbiente'].'</td>
                                 <td>'.$value['nombre'].'</td>
-                                <td>'.$value['fecha'].'</td>
-                                <td>'.$value['tipo'].'</td>
-                                <td>'.$value['descripcion'].'</td>
+                                <td>'.$value['aforo'].'</td>
+                                <td>'.$value['ubicacion'].'</td>
                             </tr>'; 
     }
-    $nombre ='novedades HUB ';
+    $nombre ='ambientes HUB ';
 
             header('Expires: 0');
             header('Cache-control: private');
@@ -35,6 +33,5 @@
             header("Pragma: public"); 
             header('Content-Disposition:attachment; filename="'.$nombre.date('Y-m-d').'.xls"');
             header("Content-Transfer-Encoding: binary");
-
     echo $tabla.$datosTabla.'</tbody></table>';
 ?>

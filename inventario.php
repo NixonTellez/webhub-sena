@@ -56,7 +56,7 @@
                                 <a href="inventario.php">Inventario</a>
                             </li>
                             <li class="menu-item">
-                                <a href="html/ambientes.php">Ambientes</a>
+                                <a href="./html/ambientes.php">Ambientes</a>
                             </li>
                             <li class="menu-item">
                                 <a href="procesos/salir.php">Cerrar sesión</a>

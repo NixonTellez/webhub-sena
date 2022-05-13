@@ -29,7 +29,7 @@
 	<script defer src="../js/script.js"></script>
     <script src="https://kit.fontawesome.com/a32e8b867e.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../img/Logo-de-SENA-sin-fondo-naranja-300x300.png"/>
-	<title>Novedades</title>
+	<title>Solicitudes de reserva</title>
 </head>
 <body>
 	<header class="header-top">
@@ -74,8 +74,8 @@
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="btn-group flex-wrap btn-group-toggle">
-									<a href="../inventario.php" class="btn btn-secondary"><i class="fa-solid fa-circle-chevron-left"></i> Volver</a>
-									<a target="_blank" href="../procesos/consultaNovedad.php" class="btn btn-secondary"><i class="fa-solid fa-circle-chevron-down"></i> Exportar a excel</a>
+									<a href="../html/ambientes.php" class="btn btn-secondary"><i class="fa-solid fa-circle-chevron-left"></i> Volver</a>
+									<a target="_blank" href="../procesos/consultaReserva.php" class="btn btn-secondary"><i class="fa-solid fa-circle-chevron-down"></i> Exportar a excel</a>
 								</div>
 							</div>
 						</div>
@@ -97,7 +97,7 @@
 	<script src="../librerias/bootstrap4/popper.min.js"></script>
 	<script src="../librerias/bootstrap4/bootstrap.min.js"></script>
 	<script src="../librerias/sweetalert.min.js"></script>
-	<script src="../jsc/crud.js"></script>
+	<script src="../jsc/crudAmbiente.js"></script>
 
 	<script type="text/javascript">
 		mostrarReserva();

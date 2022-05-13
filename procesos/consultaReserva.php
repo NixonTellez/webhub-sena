@@ -1,30 +1,34 @@
 <?php 
-    require_once "../crud/crudNovedad.php";
-    $obj=new CrudNovedad();
-    $datos=$obj->mostrarDatosNovedad();
+    require_once "../crud/crudReserva.php";
+    $obj=new CrudReserva();
+    $datos=$obj->mostrarDatosReserva();
 
     $tabla='<table>
     <thead>
         <tr>
-            <td>Codigo</td>
-            <td>Nombre</td>
+            <td>ID</td>
+            <td>Solicitante</td>
             <td>Fecha</td>
-            <td>Tipo</td>
-            <td>Descripción</td>
+            <td>Horario</td>
+            <td>Ambiente</td>
+            <td>Asistentes</td>
+            <td>Uso</td>
         </tr>
     </thead>
     <tbody>';
     $datosTabla="";
     foreach ($datos as $key => $value) {
         $datosTabla=$datosTabla.'<tr>
-                                <td>'.$value['codigo'].'</td>
-                                <td>'.$value['nombre'].'</td>
+                                <td>'.$value['idReserva'].'</td>
+                                <td>'.$value['primerNombre'].' '.$value['segundoNombre'].' '.$value['primerApellido'].' '.$value['segundoApellido'].'</td>
                                 <td>'.$value['fecha'].'</td>
-                                <td>'.$value['tipo'].'</td>
-                                <td>'.$value['descripcion'].'</td>
+                                <td>'.$value['horaInicio'].' - '.$value['horaFin'].'</td>
+                                <td>'.$value['idAmbiente'].' - '.$value['nombre'].'</td>
+                                <td>'.$value['asistentes'].'</td>
+                                <td>'.$value['uso'].'</td>
                             </tr>'; 
     }
-    $nombre ='novedades HUB ';
+    $nombre ='historial de solicitudes HUB ';
 
             header('Expires: 0');
             header('Cache-control: private');
