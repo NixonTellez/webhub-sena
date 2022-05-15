@@ -409,7 +409,7 @@ a{
     flex-direction: row ;
     justify-content: center;
     align-items: center;
-    background: #626161;
+    background: #FFF;
     border-radius: .3rem;
     border: 1px solid #ED7D31;
 }
@@ -430,7 +430,7 @@ a{
     padding: 5px;
 }
 .blog-post-title h2{
-    color: #fff;
+    color: #ED7D31;
     text-transform: uppercase;
 
 }
@@ -439,7 +439,7 @@ a{
     font-style: normal;
     border-radius: .3rem;
     padding: .5rem;
-    background-color: #626161;
+    background-color: #FFF;
     border: 1px solid #ED7D31;
     color: #fff !important;
     box-shadow: 0 0.05em 0.1em rgba(0, 0, 0, 0.25); 
@@ -450,16 +450,16 @@ a{
 .blog-post-readmore a:hover{
     transition: .3s;
     background-color: #ED7D31;
-    border:1px solid #626161;
+    border:2px solid #ED7D31;
 }
 
 .blog-post-date{
     font-size: 20px;
-    color: #fff;
+    color: #626161;
 }
 .blog-post-desc{
     font-size: 22px;
-    color: #fff;
+    color: #626161;
 }
 @media only screen and (max-width:768px){
     .blog-post{
@@ -468,7 +468,7 @@ a{
         margin: 3rem 1rem 1rem 1rem;
         justify-content: center;
         align-items: center;
-        background: #626161;
+        background: #FFF;
         border-radius: .3rem;
         border: 1px solid #ED7D31;
     }
@@ -497,9 +497,9 @@ a{
         margin: 2rem;
         justify-content: center;
         align-items: center;
-        background: #626161;
+        background: #FFF;
         border-radius: .3rem;
-        border: 1px solid #ED7D31;
+        border: 2px solid #ED7D31;
     }
     .blog-post-img{
         flex: 1;

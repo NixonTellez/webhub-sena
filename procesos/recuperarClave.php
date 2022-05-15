@@ -75,7 +75,7 @@ $cuerpo = '<!DOCTYPE html>
             <tr>
                 <td style="background-color: #ffffff;">
                     <div class="misection">
-                        <h2 style="color: #ed7d31; margin: 0 0 7px">Hola, '.$dataConsulta['fullName'].'</h2>
+                        <h2 style="color: #ed7d31; margin: 0 0 7px">Hola, '.$dataConsulta["primerNombre"].' '.$dataConsulta["primerApellido"].'</h2>
                         <p style="margin: 2px; font-size: 18px">te hemos creado una nueva clave temporal para que puedas iniciar sesión, la clave temporal es: <strong>'.$clave.'</strong> </p>
                         <p>&nbsp;</p>
                     </div>

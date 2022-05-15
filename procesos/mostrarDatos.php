@@ -1,5 +1,5 @@
 <?php 
-    require_once "../crud/crud.php";
+    require_once "../crud/Crud.php";
     require_once "../crud/crudNovedad.php";
     $obj=new Crud();
     $datos=$obj->mostrarDatos();

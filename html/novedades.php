@@ -83,7 +83,7 @@
 						<div class="row">
 							<div class="col-sm-12">
 								
-								<div id="tablaDatosReserva"></div>			
+								<div id="tablaDatosNovedad"></div>			
 									
 							</div>
 						</div>
@@ -100,7 +100,7 @@
 	<script src="../jsc/crud.js"></script>
 
 	<script type="text/javascript">
-		mostrarReserva();
+		mostrarNovedad();
 	</script>
 </body>
 </html>

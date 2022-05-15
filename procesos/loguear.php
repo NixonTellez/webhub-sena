@@ -16,9 +16,11 @@
 		if ($array['FK_rol'] == 1) {
 			$_SESSION['rol'] = "admin";
 			header("location: ../inventario.php");
+			exit();
 		} else {
 			$_SESSION['rol'] = "user";
 			header("location: ../html/reservas.php");
+			exit();
 		}
 	} else {
 		header("location: ../html/login.php?emaiIncorrecto=1");
